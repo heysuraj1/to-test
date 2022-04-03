@@ -1,25 +1,24 @@
 import "react-native-gesture-handler";
-import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import Tabs from "./navigation/tabs";
 import MyDrawer from "./navigation/drawerNavigation";
-import React from "react";
+import { ApolloClient, InMemoryCache , ApolloProvider  } from '@apollo/client';
+
+// Initialize Apollo Client
+const client = new ApolloClient({
+  uri: 'https://test-strapi-suraj.herokuapp.com/graphql',
+  cache: new InMemoryCache()
+});
+
 
 const App = () => {
   return (
-    <>
+    <ApolloProvider client={client}>
       <NavigationContainer>
-      
-      <MyDrawer/>
-
-    </NavigationContainer>
-      {/* <NavigationContainer>
-        <Tabs />
-      </NavigationContainer> */}
-    </>
+        <MyDrawer />
+        
+      </NavigationContainer>
+      </ApolloProvider>
   );
 };
 
 export default App;
-
-const styles = StyleSheet.create({});

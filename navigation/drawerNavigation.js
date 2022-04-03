@@ -1,9 +1,6 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
-
-import HomeScreen from "../screens/HomeScreen";
 import ChatScreen from "../screens/ChatScreen";
 import FindScreen from "../screens/FindScreen";
-import PostScreen from "../screens/PostScreen";
 import SettingScreen from "../screens/SettingScreen";
 import tabs from "./tabs";
 

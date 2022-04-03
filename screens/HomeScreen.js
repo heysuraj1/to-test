@@ -1,13 +1,19 @@
-import { View, Text } from 'react-native'
+import { ScrollView} from 'react-native'
 import React from 'react'
-import MyDrawer from "../navigation/drawerNavigation";
+import TopNav from '../components/Home/TopNav';
+import Services from '../components/Home/Services';
+import MidImage from '../components/Home/MidImage';
+import AMCPlans from '../components/Home/AMCPlans';
 
 
 const HomeScreen = () => {
   return (
-    <View>
-      <Text>HomeScreen</Text>
-    </View>
+    <ScrollView >
+      <TopNav/>     
+      <Services/>      
+      <MidImage/>
+      <AMCPlans/>
+    </ScrollView>
   )
 }
 

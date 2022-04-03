@@ -4,7 +4,7 @@ import ChatScreen from "../screens/ChatScreen";
 import FindScreen from "../screens/FindScreen";
 import PostScreen from "../screens/PostScreen";
 import SettingScreen from "../screens/SettingScreen";
-import { View, Image } from "react-native";
+import { Image } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
 const Tab = createBottomTabNavigator();
